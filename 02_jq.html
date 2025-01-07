@@ -1,0 +1,19 @@
+<head>
+    <script src="jquery=3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button.hide").click(function(){
+                $("p").hide();
+            });
+            $("button.show").click(function(){
+                $("p").show();
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>문서 준비 이벤트에는 여러 다중 이벤트를 정의할 수 있음</p>
+    <p>버튼 클릭 -> 이벤트 처리</p>
+    <button>메세지 삭제</button>
+    <button>메세지 보기</button>
+</body>
