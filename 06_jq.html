@@ -1,0 +1,43 @@
+<head>
+    <script src="jquery=3.3.1.min.js"></script>
+    <script>
+        var n = 0;
+        $(document).ready(function () {
+            $("div.out").mouseenter(function () {
+                $("p:first", this).text("mouse enter");
+                $("p:last", this).text(++n);
+            });
+            $("div.out").mouseleave(function () {
+                $("p:first", this).text("mouse leave");
+                $("p:last", this).text("hitcount:" + n);
+            });
+            $("div.out").mousedown(function () {
+                $("p:first", this).hide();
+                $("p:last", this).text("메시지 사라짐");
+            });
+            $("div.out").mouseup(function () {
+                $("p:first", this).show();
+                $("p:last", this).text("최종 횟수 : " + n);
+            });
+
+        });
+    </script>
+    <style>
+        div.out {
+            width: 300px;
+            height: 100px;
+            padding: 10px;
+            margin: 10px;
+            background-color: aqua;
+            text-align: center;
+            border: 5px solid #aaaaaa;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="out">
+        <p>mouse over</p>
+        <p>count</p>
+    </div>
+</body>
